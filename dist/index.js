@@ -17,26 +17,33 @@ const moralis_1 = __importDefault(require("moralis"));
 const dotenv_1 = __importDefault(require("dotenv"));
 const cors_1 = __importDefault(require("cors"));
 const abi_json_1 = __importDefault(require("./abi.json"));
+const common_evm_utils_1 = require("@moralisweb3/common-evm-utils");
 dotenv_1.default.config();
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)());
 app.use(express_1.default.json());
+const chain = common_evm_utils_1.EvmChain.POLYGON_AMOY;
 app.get("/userDetail", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     // this is also an chain id 0x13882 finds on https://chainlist.org/chain/80002
-    const { userAddress } = req.query;
+    const { userAddress } = yield req.query;
+    console.log(userAddress);
     try {
         const response = yield moralis_1.default.EvmApi.utils.runContractFunction({
-            chain: '0x13882',
-            address: '0x62c8586604B73F206449c7E951b2EbFc169738C2',
-            functionName: 'addressToWalletName',
-            abi: abi_json_1.default,
-            params: {
-                '': userAddress
+            "chain": chain,
+            "address": "0xf87acb59E9A1d832f15d1E54D95D6aE2cfDb79C9",
+            "functionName": "getWalletName",
+            "abi": abi_json_1.default,
+            "params": {
+                _user: userAddress === null || userAddress === void 0 ? void 0 : userAddress.toString()
             }
         });
-        const jsonResponseName = response.raw;
+        const secResponse = yield moralis_1.default.EvmApi.balance.getNativeBalance({
+            "chain": "0x13882",
+            "address": (userAddress === null || userAddress === void 0 ? void 0 : userAddress.toString()) || ""
+        });
+        // const jsonResponseName = response.raw;
         return res.status(200).json({
-            name: jsonResponseName
+            name: response.raw
         });
     }
     catch (error) {

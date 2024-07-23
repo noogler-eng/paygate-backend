@@ -1,16 +1,8 @@
 [
-    {
-        "inputs": [],
-        "stateMutability": "nonpayable",
-        "type": "constructor"
-    },
+    { "inputs": [], "stateMutability": "nonpayable", "type": "constructor" },
     {
         "inputs": [
-            {
-                "internalType": "string",
-                "name": "_walletName",
-                "type": "string"
-            }
+            { "internalType": "string", "name": "_walletName", "type": "string" }
         ],
         "name": "addWalletName",
         "outputs": [],
@@ -19,107 +11,41 @@
     },
     {
         "inputs": [
-            {
-                "internalType": "address",
-                "name": "",
-                "type": "address"
-            },
-            {
-                "internalType": "uint256",
-                "name": "",
-                "type": "uint256"
-            }
+            { "internalType": "address", "name": "", "type": "address" },
+            { "internalType": "uint256", "name": "", "type": "uint256" }
         ],
         "name": "addressRequests",
         "outputs": [
-            {
-                "internalType": "string",
-                "name": "name",
-                "type": "string"
-            },
-            {
-                "internalType": "address",
-                "name": "from",
-                "type": "address"
-            },
-            {
-                "internalType": "uint256",
-                "name": "amount",
-                "type": "uint256"
-            },
-            {
-                "internalType": "string",
-                "name": "message",
-                "type": "string"
-            }
+            { "internalType": "string", "name": "name", "type": "string" },
+            { "internalType": "address", "name": "from", "type": "address" },
+            { "internalType": "uint256", "name": "amount", "type": "uint256" },
+            { "internalType": "string", "name": "message", "type": "string" }
         ],
         "stateMutability": "view",
         "type": "function"
     },
     {
-        "inputs": [
-            {
-                "internalType": "address",
-                "name": "",
-                "type": "address"
-            }
-        ],
+        "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
         "name": "addressToWalletName",
         "outputs": [
-            {
-                "internalType": "string",
-                "name": "name",
-                "type": "string"
-            },
-            {
-                "internalType": "bool",
-                "name": "hasName",
-                "type": "bool"
-            }
+            { "internalType": "string", "name": "name", "type": "string" },
+            { "internalType": "bool", "name": "hasName", "type": "bool" }
         ],
         "stateMutability": "view",
         "type": "function"
     },
     {
         "inputs": [
-            {
-                "internalType": "address",
-                "name": "",
-                "type": "address"
-            },
-            {
-                "internalType": "uint256",
-                "name": "",
-                "type": "uint256"
-            }
+            { "internalType": "address", "name": "", "type": "address" },
+            { "internalType": "uint256", "name": "", "type": "uint256" }
         ],
         "name": "addressTxns",
         "outputs": [
-            {
-                "internalType": "string",
-                "name": "action",
-                "type": "string"
-            },
-            {
-                "internalType": "string",
-                "name": "anotherName",
-                "type": "string"
-            },
-            {
-                "internalType": "address",
-                "name": "anotherWallet",
-                "type": "address"
-            },
-            {
-                "internalType": "uint256",
-                "name": "pay",
-                "type": "uint256"
-            },
-            {
-                "internalType": "string",
-                "name": "message",
-                "type": "string"
-            }
+            { "internalType": "string", "name": "action", "type": "string" },
+            { "internalType": "string", "name": "anotherName", "type": "string" },
+            { "internalType": "address", "name": "anotherWallet", "type": "address" },
+            { "internalType": "uint256", "name": "pay", "type": "uint256" },
+            { "internalType": "string", "name": "message", "type": "string" }
         ],
         "stateMutability": "view",
         "type": "function"
@@ -127,62 +53,26 @@
     {
         "inputs": [],
         "name": "admin",
-        "outputs": [
-            {
-                "internalType": "address",
-                "name": "",
-                "type": "address"
-            }
-        ],
+        "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
         "stateMutability": "view",
         "type": "function"
     },
     {
         "inputs": [
-            {
-                "internalType": "address",
-                "name": "_to",
-                "type": "address"
-            },
-            {
-                "internalType": "uint256",
-                "name": "_amount",
-                "type": "uint256"
-            },
-            {
-                "internalType": "string",
-                "name": "_msg",
-                "type": "string"
-            }
+            { "internalType": "address", "name": "_to", "type": "address" },
+            { "internalType": "uint256", "name": "_amount", "type": "uint256" },
+            { "internalType": "string", "name": "_msg", "type": "string" }
         ],
         "name": "createPay",
-        "outputs": [
-            {
-                "internalType": "bool",
-                "name": "",
-                "type": "bool"
-            }
-        ],
+        "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
         "stateMutability": "payable",
         "type": "function"
     },
     {
         "inputs": [
-            {
-                "internalType": "address",
-                "name": "_to",
-                "type": "address"
-            },
-            {
-                "internalType": "uint256",
-                "name": "_amount",
-                "type": "uint256"
-            },
-            {
-                "internalType": "string",
-                "name": "_msg",
-                "type": "string"
-            }
+            { "internalType": "address", "name": "_to", "type": "address" },
+            { "internalType": "uint256", "name": "_amount", "type": "uint256" },
+            { "internalType": "string", "name": "_msg", "type": "string" }
         ],
         "name": "createRequest",
         "outputs": [],
@@ -195,26 +85,10 @@
         "outputs": [
             {
                 "components": [
-                    {
-                        "internalType": "string",
-                        "name": "name",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "address",
-                        "name": "from",
-                        "type": "address"
-                    },
-                    {
-                        "internalType": "uint256",
-                        "name": "amount",
-                        "type": "uint256"
-                    },
-                    {
-                        "internalType": "string",
-                        "name": "message",
-                        "type": "string"
-                    }
+                    { "internalType": "string", "name": "name", "type": "string" },
+                    { "internalType": "address", "name": "from", "type": "address" },
+                    { "internalType": "uint256", "name": "amount", "type": "uint256" },
+                    { "internalType": "string", "name": "message", "type": "string" }
                 ],
                 "internalType": "struct PayWeb3.Request[]",
                 "name": "",
@@ -230,31 +104,15 @@
         "outputs": [
             {
                 "components": [
-                    {
-                        "internalType": "string",
-                        "name": "action",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "string",
-                        "name": "anotherName",
-                        "type": "string"
-                    },
+                    { "internalType": "string", "name": "action", "type": "string" },
+                    { "internalType": "string", "name": "anotherName", "type": "string" },
                     {
                         "internalType": "address",
                         "name": "anotherWallet",
                         "type": "address"
                     },
-                    {
-                        "internalType": "uint256",
-                        "name": "pay",
-                        "type": "uint256"
-                    },
-                    {
-                        "internalType": "string",
-                        "name": "message",
-                        "type": "string"
-                    }
+                    { "internalType": "uint256", "name": "pay", "type": "uint256" },
+                    { "internalType": "string", "name": "message", "type": "string" }
                 ],
                 "internalType": "struct PayWeb3.Txn[]",
                 "name": "",
@@ -266,19 +124,31 @@
     },
     {
         "inputs": [
+            { "internalType": "address", "name": "_user", "type": "address" }
+        ],
+        "name": "getWalletName",
+        "outputs": [
             {
-                "internalType": "uint256",
-                "name": "_requestId",
-                "type": "uint256"
+                "components": [
+                    { "internalType": "string", "name": "name", "type": "string" },
+                    { "internalType": "bool", "name": "hasName", "type": "bool" }
+                ],
+                "internalType": "struct PayWeb3.WalletName",
+                "name": "",
+                "type": "tuple"
             }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            { "internalType": "uint256", "name": "_requestId", "type": "uint256" }
         ],
         "name": "requestPay",
         "outputs": [],
         "stateMutability": "payable",
         "type": "function"
     },
-    {
-        "stateMutability": "payable",
-        "type": "receive"
-    }
+    { "stateMutability": "payable", "type": "receive" }
 ]
